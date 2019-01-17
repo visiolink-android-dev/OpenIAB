@@ -1,14 +1,18 @@
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '3.2.1'
 }
 
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'org.robolectric:robolectric-gradle-plugin:0.13.2'
     }
 }
@@ -18,10 +22,14 @@ allprojects {
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'https://raw.githubusercontent.com/onepf/OPF-mvn-repo/master/' }
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     ext {
-        compileSdkVersion = 21
+        compileSdkVersion = 25
         buildToolsVersion = "21.1.2"
         minSdkVersion = 10
         targetSdkVersion = 21

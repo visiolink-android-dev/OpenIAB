@@ -52,6 +52,8 @@ dependencies {
     provided 'com.amazon:in-app-purchasing:2.0.61'
     provided 'com.braintree:fortumo-in-app:9.1.2'
 
+    compile 'com.android.billingclient:billing:1.2'
+
     androidTestCompile 'org.robolectric:robolectric:2.3'
     androidTestCompile 'junit:junit:4.11'
 }
