@@ -32,6 +32,8 @@ import android.os.RemoteException;
 
 import com.android.vending.billing.IInAppBillingService;
 
+import java.util.List;
+
 /**
  * @author Boris Minaev, Oleg Orlov
  * @since 28.05.13
@@ -217,6 +219,36 @@ public class OpenAppstore extends DefaultAppstore {
         @Override
         public int consumePurchase(int apiVersion, String packageName, String purchaseToken) throws RemoteException {
             return openStoreBilling.consumePurchase(apiVersion, packageName, purchaseToken);
+        }
+
+        @Override
+        public int stub(int i, String s, String s1) throws RemoteException {
+            return 0;
+        }
+
+        @Override
+        public Bundle getBuyIntentToReplaceSkus(int i, String s, List<String> list, String s1, String s2, String s3) throws RemoteException {
+            return null;
+        }
+
+        @Override
+        public Bundle getBuyIntentExtraParams(int i, String s, String s1, String s2, String s3, Bundle bundle) throws RemoteException {
+            return null;
+        }
+
+        @Override
+        public Bundle getPurchaseHistory(int i, String s, String s1, String s2, Bundle bundle) throws RemoteException {
+            return null;
+        }
+
+        @Override
+        public int isBillingSupportedExtraParams(int i, String s, String s1, Bundle bundle) throws RemoteException {
+            return 0;
+        }
+
+        @Override
+        public Bundle getSubscriptionManagementIntent(int i, String s, String s1, String s2, Bundle bundle) throws RemoteException {
+            return null;
         }
     }
 
