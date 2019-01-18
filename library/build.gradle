@@ -25,8 +25,8 @@ android {
     defaultConfig {
         minSdkVersion project.minSdkVersion
         targetSdkVersion project.targetSdkVersion
-        versionCode 11
-        versionName '0.9.8.7'
+        versionCode 12
+        versionName '0.9.8.8'
     }
 
     lintOptions {
@@ -52,7 +52,7 @@ dependencies {
     compileOnly 'com.amazon:in-app-purchasing:2.0.61'
     compileOnly 'com.braintree:fortumo-in-app:9.1.2'
 
-    implementation 'com.android.billingclient:billing:1.2'
+    implementation 'com.android.billingclient:billing:1.1'
 
     androidTestImplementation 'org.robolectric:robolectric:2.3'
     androidTestImplementation 'junit:junit:4.11'
